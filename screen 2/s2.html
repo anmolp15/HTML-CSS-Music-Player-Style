@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Album</title>
+	<link rel="stylesheet" type="text/css" href="s2.css">
+	<script src="https://kit.fontawesome.com/6f38b70ccc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="body-header">
+		<div id="logo">
+			<img src="../images/logo.png">
+		</div>
+
+		<div id="search-bar">
+			<input type="text" name="" placeholder="Search...">
+			<button><i class="fas fa-search"></i></button>
+			<a href="..\screen 1\s1.html"><button class="text"><i class="fas fa-home"></i></button></a>
+		</div>
+
+		<div id="hoverable-dropdown">
+			<button class="dropbtn">Queue</button> 
+			<div class="drop-content">
+				<a href="#">Queue</a>
+				<a href="#">Playlist</a>
+				<a href="#">My Favourits</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="music-showcase-div">
+		<main>
+			<div id="album-details">
+				<div id="album-image">
+					<!-- <img src="..\images\sq-img.jpg"> -->
+					<img src="..\images\sq-img3.png">
+				</div>
+				<div id="album-description">
+					<h1>Album name</h1>
+					<p>British Brand | <span>5 songs</span></p>
+					<article>
+						<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</span>
+					</article>
+					<br>
+					<div id="album-related-buttons">
+						<button>Play All</button>
+						<button>Follow</button>
+						<button><i class="fas fa-plus"></i></button>
+						<button><i class="far fa-heart"></i></button>
+						<button><i class="fas fa-share"></i></button>
+					</div>
+					
+				</div>
+			</div>
+
+			<div id="album-songs">
+				<div class="each-album-song">
+					<div class="flex-vertical-center">
+						<div class="each-album-song-thumbnail">
+							<img src="..\images\song-thumbnail4.jpg">
+						</div>
+						<span>Song One Name |</span> &nbspArtist
+					</div>
+					
+					<div class="each-album-song-buttons">
+						<button><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-plus"></i></button>
+						<button><i class="far fa-heart"></i></button>
+					</div>
+				</div>
+
+				<div class="each-album-song">
+					<div class="flex-vertical-center">
+						<div class="each-album-song-thumbnail">
+							<img src="..\images\song-thumbnail4.jpg">
+						</div>
+						<span>Song Two Name |</span> &nbspArtist
+					</div>
+					
+					<div class="each-album-song-buttons">
+						<button><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-plus"></i></button>
+						<button><i class="far fa-heart"></i></button>
+					</div>
+				</div>
+
+				<div class="each-album-song">
+					<div class="flex-vertical-center">
+						<div class="each-album-song-thumbnail">
+							<img src="..\images\song-thumbnail4.jpg">
+						</div>
+						<span>Song Three Name |</span> &nbspArtist
+					</div>
+					
+					<div class="each-album-song-buttons">
+						<button><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-plus"></i></button>
+						<button><i class="far fa-heart"></i></button>
+					</div>
+				</div>
+
+				<div class="each-album-song">
+					<div class="flex-vertical-center">
+						<div class="each-album-song-thumbnail">
+							<img src="..\images\song-thumbnail4.jpg">
+						</div>
+						<span>Song Four Name |</span> &nbspArtist
+					</div>
+					
+					<div class="each-album-song-buttons">
+						<button><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-plus"></i></button>
+						<button><i class="far fa-heart"></i></button>
+					</div>
+				</div>
+
+				<div class="each-album-song">
+					<div class="flex-vertical-center">
+						<div class="each-album-song-thumbnail">
+							<img src="..\images\song-thumbnail4.jpg">
+						</div>
+						<span>Song Five Name |</span> &nbspArtist
+					</div>
+					
+					<div class="each-album-song-buttons">
+						<button><i class="fas fa-play"></i></button>
+						<button><i class="fas fa-plus"></i></button>
+						<button><i class="far fa-heart"></i></button>
+					</div>
+				</div>
+			</div>
+			
+		</main>
+	</div>
+
+	<div id="music-controls-div">
+
+		<div id="music-control-album">
+			<div id="music-control-album-image">
+				<img src="..\images\song-thumbnail6.jpg">
+			</div>
+			<div id="music-control-album-details">
+				<span>Playing Song</span> <br>Artist name
+			</div>	
+		</div>
+
+		<!-- <div id="inbuilt-audio-player">
+			<audio controls>
+				<source src="..\music\perfect-strangers.mp3" type="">
+			</audio>
+		</div> -->
+
+		<div id="progress-bar" class="transparent-white-buttons">
+			<div style="display: flex;">
+				<button>
+					<span><i class="fas fa-angle-double-left"></i></span>
+				</button>
+				<button onclick="move()">
+					<span><i class="fas fa-play"></i></span>
+				</button> 
+				<button onclick="pause()">
+					<span><i class="fas fa-pause"></i></span>
+				</button>
+				<button>
+					<span><i class="fas fa-angle-double-right"></i></span>
+				</button>
+			</div>
+
+			<div id="myProgress">
+  				<div id="myBar"></div>
+			</div>
+
+			<div style="display: flex;">
+				<button>
+					<span>
+						<i class="fas fa-redo-alt"></i>
+					</span>
+				</button>
+
+				<button>
+					<span><i class="fas fa-random"></i></span>
+				</button>
+			</div>
+			
+
+			<script>
+				var interval;
+				var width = 0;
+
+				function move() {
+	  				var elem = document.getElementById("myBar");
+	 
+	  				clearInterval(interval);
+	  				interval = setInterval(frame, 20);
+
+	  				function frame() {
+	    				if (width >= 100) {
+	      					width = 0;
+	      					clearInterval(interval);
+	    				} else {
+	      					width+=.07;
+	      					elem.style.width = width + '%';
+	    				}
+	  				}
+				}
+
+				function pause() {
+	  				clearInterval(interval);
+				}
+			</script>
+		</div>
+
+		<div id="volume-control" class="transparent-white-buttons">
+			<button>
+				<span><i class="fas fa-volume-down"></i></span>
+			</button>
+			<input type="range" name="">
+		</div>
+	</div>
+</body>
+</html>

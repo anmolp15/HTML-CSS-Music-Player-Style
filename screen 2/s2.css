@@ -1,0 +1,389 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: cursive;
+	background-image: url(../images/background2.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/*overall structure of screen*/
+#body-header{
+	width: 100%;
+    height: 44.85px;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	/*z-index: 5;*/
+}
+#music-showcase-div{
+	margin-top: 44.85px;
+	width: 100%;
+	height: auto;
+	background-image: linear-gradient(-45deg,transparent, #f8b6aa);
+	display: flex;
+	justify-content: center;
+}
+#music-controls-div{
+	width: 100%;
+	min-height: 70px;
+	background-color: black;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+
+
+/*body header section*/
+#logo{
+	width: 200px;
+}
+#logo img{
+	width: 100%;
+	height: 100%;
+}
+
+/*--> hover dropdown menu.*/
+#hoverable-dropdown{
+	height: 44.85px;
+	width: 200px;
+}
+.dropbtn{
+	font-size: 16px;
+	font-family: cursive;
+	height: 100%;
+	width: 100%;
+	border: none;
+	background-color: #00fffb;
+}
+.drop-content{
+	z-index: 2;
+	display: none;
+	box-shadow: 5px 5px 5px 2px grey;
+	background-color: #01dcd9;
+}
+.drop-content a{
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 9px;
+	color: black;
+	transition: all .2s ease-in-out;
+}
+.dropbtn:hover + .drop-content{
+	display: block;	
+}
+.drop-content:hover{
+	display: block;
+}
+.drop-content a:hover{
+	background-color: #01d0cd;
+	font-size: 15px;
+}
+
+
+/*search bar*/
+#search-bar{
+	width: 40vw;
+	display: flex;
+}
+#search-bar a{
+	vertical-align: middle;
+	font-size: 1.6rem;
+}
+#search-bar input{
+	width: 100%;
+	margin: 5px 0px 5px 5px;
+	font-size: 1rem;
+	border-radius: 50px;
+	border: 2px solid lightgrey;
+	padding: 10px 20px;
+}
+#search-bar button{
+	margin: 5px 5px 5px 0px;
+	background-color: transparent;
+	border: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+
+
+
+
+/*music control section*/
+#music-control-album{
+	margin: auto 20px;
+	vertical-align: middle;
+	height: 60px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+}
+#music-control-album-image{
+	margin : 3px;
+	width: 40px;
+	height: 40px;
+}
+#music-control-album-image img{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+
+#music-control-album-details{
+	margin-left: 15px;
+	font-size: 12px;
+	color: white;
+	font-weight: 500;
+}
+#music-control-album-details span{
+	margin-left: 0px;
+	font-size: 14px;
+	color: white;
+	font-weight: 600;
+}
+
+/*progress-bar-buttons*/
+#progress-bar{
+	display: flex;
+	align-items: center;
+}
+
+.transparent-white-buttons button {
+	background-color: transparent;
+	border: none;
+	transition: all .2s ease-in-out;
+}
+.transparent-white-buttons button:hover {
+	transform: scale(1.2);
+}
+.transparent-white-buttons button span{
+	padding: 5px;
+	font-size: 1.2rem;
+	color: white;
+	cursor: pointer;
+}
+
+
+/*progress bar*/
+#myProgress {
+	margin: auto 10px;
+  	width: 50vw;
+ 	height: 5px;
+ 	background-color: white;
+}
+
+#myBar {
+  	width: 0%;
+ 	height: 5px;
+  	background-color: #0075ff;
+}
+
+#volume-control{
+	display: flex;
+	align-items: center;
+}
+
+
+/*album showcase dic -> main*/
+main{
+	width: 60vw;
+	height: fit-content;
+	padding-bottom: 8vh;
+}
+#album-details{
+	display: flex;
+	justify-content: space-between;
+	margin: 10px auto;
+	width: 98%;
+	height: 55%;
+}
+#album-image{
+	height: 400px;
+	min-width: 400px;
+}
+#album-image img{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+/*rotate animation*/
+#album-image img:hover{
+	animation: spin 2s linear infinite;
+	-webkit-animation: spin 2s linear infinite;
+	transition: all .5s ease;
+	-webkit-transition: all .5s;
+}
+@-webkit-keyframes spin {
+	0% {
+    -webkit-transform: rotate(0deg);
+	}
+	100% {
+ 		-webkit-transform: rotate(360deg);
+	}
+}
+
+#album-description{
+	margin: 0px 30px;
+}
+#album-description h1{
+	font-size: 3.25rem;
+	line-height: 2.5rem;
+}
+#album-description p{
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+#album-description p span{
+	font-size: .9rem;
+}
+article{
+	width: 100%;
+	text-align: justify;
+	color: black;
+}
+#album-related-buttons{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+#album-description button{
+	margin: 5px;
+	padding: 7px 23px;
+	border-radius: 7px;
+	border: none;
+	background-color: #333333;
+	color: white;
+	transition: all .3s ease-in-out;
+}
+#album-description button:hover{
+	background-color: black;
+	font-size: .9rem;
+	padding: 2px 21px;
+}
+
+#album-songs{
+	margin: 10px auto;
+	width: 98%;
+	/*height: 400px;*/
+}
+.each-album-song{
+	width: 100%;
+	height: 60px;
+	margin: 10px auto;
+	border-bottom: 2px solid grey;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: .9rem;
+}
+.flex-vertical-center{
+	display: flex;
+	align-items: center;
+}
+.each-album-song span{
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+.each-album-song-thumbnail{
+	margin: auto 10px;
+	width: 50px;
+	height: 50px;
+}
+.each-album-song-thumbnail img{
+	height: 100%;
+	width: 100%;
+}
+
+.each-album-song-buttons button{
+	background-color: transparent;
+	border: none;
+	margin-right: 15px;
+	transition: all .2s ease-in-out;
+}
+.each-album-song-buttons button:hover{
+	transform: scale(1.2);
+}
+
+
+
+/*extra part not for project*/
+
+#inbuilt-audio-player{
+	margin: auto;
+	width: 75%;
+}
+
+#inbuilt-audio-player audio{
+	width: 100%;
+}
+
+
+/*responsivness*/
+@media screen and (max-width: 1230px) {
+	#myProgress {
+		width: 40vw;
+	}
+}
+@media screen and (max-width: 1000px) {
+	article{
+		display: none;
+	}
+	main{
+		width: 90vw;
+	}
+	#music-control-album{
+		margin: auto 10px;
+	}
+	#myProgress {
+		width: 35vw;
+	}
+}
+@media screen and (max-width: 870px) {
+	.transparent-white-buttons button span{
+		font-size: 1rem;
+	}
+	#myProgress {
+		width: 30vw;
+	}
+}
+@media screen and (max-width: 790px) {
+	#progress-bar{
+		display: flex;
+		flex-direction: column;
+		padding: 10px 0px;
+	}
+	#myProgress {
+		width: 40vw;
+	}
+	#music-controls-div{
+		min-height: 90px;
+	}
+	.transparent-white-buttons button span{
+		padding: 2px;
+	}
+	#music-control-album{
+		margin: auto 10px;
+	}
+}
+@media screen and (max-width: 620px) {
+	#album-description{
+		transform: scale(.8);
+		margin: -50px 0px;
+		padding-right: 20px;
+	}
+	#album-image{
+		height: 200px;
+		min-width: 200px;
+	}
+	#album-songs{
+		width: 100%;
+		/*margin: 0px;*/
+	}
+
+}
